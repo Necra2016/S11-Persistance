@@ -1267,6 +1267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointageTemps: 0
   textScore: {fileID: 1658739534}
+  textScorePanneau: {fileID: 440997073}
+  panneauRecord: {fileID: 440997071}
 --- !u!1 &1320988571
 GameObject:
   m_ObjectHideFlags: 0

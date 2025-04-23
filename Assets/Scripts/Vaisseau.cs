@@ -12,7 +12,7 @@ public class Vaisseau : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
-    
+
     private Vector2 directionInput;
     private Vector2 positionPointerEcran;
     private bool vaisseauAccelere;
@@ -20,7 +20,7 @@ public class Vaisseau : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();    
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -47,7 +47,7 @@ public class Vaisseau : MonoBehaviour
 
     private void Update()
     {
-        jeu.pointageTemps += Time.deltaTime;        
+        jeu.pointageTemps += Time.deltaTime;
     }
 
     void FixedUpdate()
@@ -66,5 +66,7 @@ public class Vaisseau : MonoBehaviour
     private void OnDestroy()
     {
         Instantiate(fxExplosion, transform.position, transform.rotation);
+        jeu.TraiterMort();
     }
 }
+
